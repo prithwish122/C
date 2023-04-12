@@ -24,10 +24,15 @@ char *infix_to_postfix(char *inf, stack *s);
 int main()
 {
     stack s1;
-    init(&s1, 20);
-    char infix[20] = "a+b+(c*d)+e/f";
+    char infix[20];
+    int n;
+    printf("Enter the size of the stack: ");
+    scanf("%d",&n);//n=20
+    init(&s1, n);
+    printf("Enter the infix equation here: ");
+    scanf("%s",&infix);
     char *postfix = infix_to_postfix(infix, &s1);
-    printf("%s\n", postfix);
+    printf("The postfix equation is %s\n", postfix);
     return 0;
 }
 
