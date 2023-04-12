@@ -13,10 +13,10 @@ typedef struct stack
 
 void init(stack *p, int size);
 int isfull(stack *p);
-int push(stack *p, int item);
+void push(stack *p, int item);
 int isempty(stack *p);
 char pop(stack *p);
-int peek(stack *p);
+char peek(stack *p);
 int isOperator(char ch);
 int presedence(char ch);
 char *infix_to_postfix(char *inf, stack *s);
@@ -43,16 +43,11 @@ int isfull(stack *p)
     return (p->top == p->size - 1);
 }
 
-int push(stack *p, int item)
+void push(stack *p, int item)
 {
-    if (isfull(p))
-    {
-        return 1;
-    }
-    else
+    if (isfull(p) != 1)
     {
         p->arr[++p->top] = item;
-        return 0;
     }
 }
 
@@ -73,7 +68,7 @@ char pop(stack *p)
     }
 }
 
-int peek(stack *p)
+char peek(stack *p)
 {
     return (p->arr[p->top]);
 }
@@ -97,14 +92,18 @@ int presedence(char ch)
     {
         return 3;
     }
+    else
+    {
+        return 0;
+    }
 }
 
 char *infix_to_postfix(char *inf, stack *s)
 {
     int i, j;
-    int item = strlen(inf);
-    char *pf = (char*)malloc(item*sizeof(char));
-    for (i = 0, j = 0; i < item; i++)
+    int ilen = strlen(inf);
+    char *pf = (char*)malloc(ilen*sizeof(char));
+    for (i = 0, j = 0; i < ilen; i++)
     {
         if (inf[i] == ' ' || inf[i] == '\t') // error correction
         {

@@ -18,10 +18,39 @@ int isempty(stack *p);
 int main()
 {
     stack s1;
-    init(&s1, 5);
+    int n,x,i;
+    printf("Enter the size of the stack: ");
+    scanf("%d",&n);
+    init(&s1, n);
+    for(i=0;i<n;i++)
+    {
+        printf("Enter the value you want to push: ");
+        scanf("%d",x);
+        if (push(&s1, x))
+        {
+        printf("Overflow\n");
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        if (pop(&s1))
+        {
+        printf("Underflow\n");
+        }
+        else
+        {
+            printf("%d is popped\n", pop(&s1));
+        }
+    }
+    /*push(&s1, 10);
     push(&s1, 10);
+    push(&s1, 10);
+    printf("Popped value %d\n",pop(&s1));
+    printf("Popped value %d\n",pop(&s1));
+    printf("Popped value %d\n",pop(&s1));
+    printf("Popped value %d\n",pop(&s1));
+
     if (push(&s1, 10))
-        ;
     {
         printf("Overflow\n");
     }
@@ -32,7 +61,7 @@ int main()
     else
     {
         printf("%d is popped\n", pop(&s1));
-    }
+    }*/
     return 0;
 }
 
@@ -51,6 +80,7 @@ int push(stack *p, int item)
     }
     else
     {
+        printf("%d",item);
         p->arr[++p->top] = item;
         return 0;
     }
