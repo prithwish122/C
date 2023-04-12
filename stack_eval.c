@@ -32,11 +32,12 @@ int main()
     init(&s1, 100);
     char postfix[100];
     printf("Enter the Postfix Expression: ");
-    gets(postfix);
+    scanf("%s",&postfix);
     postfix_evl(&s1, postfix);
     printf("The evaluated value of the equation is %c", peek(&s1));
     return 0;
 }
+
 int isfull(stack *s)
 {
     return (s->top == s->size - 1);
