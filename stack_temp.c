@@ -20,17 +20,25 @@ int main()
     stack s1;
     int n,x,i;
     printf("Enter the size of the stack: ");
-    scanf("%d",&n);
+    scanf("%d",&n);//n=20
     init(&s1, n);
     for(i=0;i<n;i++)
     {
         printf("Enter the value you want to push: ");
         scanf("%d",x);
+        if(x==0)
+        {
+            break;
+        }
+        else
+        {
         if (push(&s1, x))
         {
         printf("Overflow\n");
         }
+        }
     }
+    //printf("%d popped from the stack\n",pop(&s1));
     for(i=0;i<n;i++)
     {
         if (pop(&s1))
@@ -42,7 +50,7 @@ int main()
             printf("%d is popped\n", pop(&s1));
         }
     }
-    /*push(&s1, 10);
+   /* push(&s1, 10);
     push(&s1, 10);
     push(&s1, 10);
     printf("Popped value %d\n",pop(&s1));
@@ -80,8 +88,8 @@ int push(stack *p, int item)
     }
     else
     {
-        printf("%d",item);
         p->arr[++p->top] = item;
+        printf("%d is pushed to stack\n",item);
         return 0;
     }
 }
