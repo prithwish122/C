@@ -1,3 +1,4 @@
+//Basic template of Queue(Enqueue and Dequeue)
 #include<stdio.h>
 #include<stdlib.h>
 

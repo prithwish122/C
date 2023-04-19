@@ -1,3 +1,4 @@
+//Centigrade and Farenheit conversion using switch case.
 #include<stdio.h>
 #include<string.h>
 int main()

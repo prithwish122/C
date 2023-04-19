@@ -1,3 +1,4 @@
+//Find th sum of first 'n' natural numbers. 
 #include<stdio.h>
 int main()
 {

@@ -1,4 +1,4 @@
-//Queue Program using switch case>>>
+//Queue Program using switch case --->>>
 
 #include <stdio.h>
 #include <stdlib.h>

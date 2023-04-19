@@ -1,4 +1,4 @@
-/*Using stack for the first time*/
+/*Basic template of Stack(push and pop)*/
 #include <stdio.h>
 #include <stdlib.h>
 

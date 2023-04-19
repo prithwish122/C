@@ -1,3 +1,4 @@
+//Calculate the n!(factorial of n)
 #include<stdio.h>
 int main()
 {

@@ -1,3 +1,4 @@
+//A simple calculator for division, addition, subtraction and multiplication.
 #include<stdio.h>
 int main()
 {
