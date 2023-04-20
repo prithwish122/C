@@ -1,5 +1,5 @@
 # C
-All C programs done it Sister Nivedita University.
+All C programs done at Sister Nivedita University.
 The Programs that you will find here are such as follows:
 1.
 2.
