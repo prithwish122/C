@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
      
-typedef struct stack
+typedef struct stack             
 {
     int top;
     int size;
